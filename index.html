@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gacha Game</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div id="game-container">
+        <nav>
+            <button id="home-button">
+                <img src="assets/images/icon/home-icon.png" alt="Home Icon"> Home
+            </button>
+            <button id="pull-button">
+                <img src="assets/images/icon/pull-icon.png" alt="Pull Icon"> Pull
+            </button>
+            <button id="collection-button">
+                <img src="assets/images/icon/collection-icon.png" alt="Collection Icon"> Collection
+            </button>
+        </nav>
+        
+        <div id="home-menu" class="menu">
+            <h1>Bienvenue dans le Gacha Game !</h1>
+            <p>S&eacute;lectionnez un menu pour commencer.</p>
+        </div>
+
+        <div id="pull-menu" class="menu" style="display: none;">
+            <h1>Tirages</h1>
+            <button id="single-pull">Tirer un personnage (1x)</button>
+            <button id="multi-pull">Tirer plusieurs personnages (10x)</button>
+            <div id="pull-result"></div>
+        </div>
+
+        <div id="collection-menu" class="menu" style="display: none;">
+            <h1>Votre Collection</h1>
+            <div id="collection"></div>
+        </div>
+    </div>
+    
+    <script type="module" src="js/app.js"></script>
+</body>
+</html>
