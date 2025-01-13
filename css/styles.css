@@ -23,6 +23,7 @@ button {
     border: none;
     border-radius: 4px;
     transition: background 0.3s;
+    align-items: center;
 }
 
 button img {
@@ -31,7 +32,16 @@ button img {
     margin-right: 8px;
 }
 button:hover {
-    background: #0056b3;
+    background: #b641c5;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #f0f0f0;
+    padding: 10px;
+    text-align: center;
 }
 
 #result {
