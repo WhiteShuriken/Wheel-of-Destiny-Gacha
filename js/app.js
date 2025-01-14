@@ -1,5 +1,5 @@
-import { character } from './character.js';
-import { rarity } from './rarity.js';
+import { character } from './data/character.js';
+import { rarity } from './data/rarity.js';
 import { tirerPersonnage } from './gacha.js';
 import { afficherResultat } from './ui.js';
 
