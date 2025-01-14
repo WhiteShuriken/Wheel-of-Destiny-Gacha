@@ -1,4 +1,4 @@
-import { character } from './data.js';
+import { character } from './character.js';
 import { tirerPersonnage } from './gacha.js';
 import { afficherResultat } from './ui.js';
 
