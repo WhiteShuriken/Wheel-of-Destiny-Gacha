@@ -11,21 +11,22 @@ export function tirerPersonnage(character, rarity) {
     // Calcul du total des probabilités depuis rarity
     const total = rarity.reduce((sum, r) => sum + r.probability, 0);
     const rand = Math.random() * total;
-    let cumulative = 0;
-
+    
     // Créer un mapping des probabilités
     const rarityMap = new Map(rarity.map(r => [r.id, r.probability]));
     
-    // Filtrer et trier les personnages par probabilité
-    const weightedCharacters = character.map(char => ({
-        ...char,
-        probability: rarityMap.get(char.rarity)
-    }));
-
-    // Déterminer quel personnage est tiré en fonction des probabilités
-    for (const personnage of weightedCharacters) {
-        cumulative += personnage.probability;
-        if (rand <= cumulative) return personnage;
+    // Mélanger le tableau de personnages pour plus d'aléatoire
+    const shuffledCharacters = [...character].sort(() => Math.random() - 0.5);
+    
+    let cumulative = 0;
+    for (const char of shuffledCharacters) {
+        const prob = rarityMap.get(char.rarity);
+        cumulative += prob;
+        if (rand <= cumulative) {
+            return char;
+        }
     }
-    return null; // Retourne null si aucun personnage n'est tiré
+    
+    // Si aucun personnage n'est sélectionné, retourner le dernier
+    return shuffledCharacters[shuffledCharacters.length - 1];
 }
