@@ -1,9 +1,9 @@
-export function tirerPersonnage(pool) {
-    const total = pool.reduce((sum, item) => sum + item.probability, 0);
+export function tirerPersonnage(character) {
+    const total = character.reduce((sum, item) => sum + item.probability, 0);
     const rand = Math.random() * total;
     let cumulative = 0;
 
-    for (const personnage of pool) {
+    for (const personnage of character) {
         cumulative += personnage.probability;
         if (rand <= cumulative) return personnage;
     }

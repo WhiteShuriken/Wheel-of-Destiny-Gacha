@@ -1,4 +1,4 @@
-import { pool } from './data.js';
+import { character } from './data.js';
 import { tirerPersonnage } from './gacha.js';
 import { afficherResultat } from './ui.js';
 
@@ -36,7 +36,7 @@ collectionButton.addEventListener("click", () => {
 
 // Gestion des tirages
 singlePullButton.addEventListener("click", () => {
-    const personnage = tirerPersonnage(pool);
+    const personnage = tirerPersonnage(character);
     collection.push(personnage); // Ajoute à la collection
     afficherResultat(personnage, pullResultDiv);
 });
@@ -44,7 +44,7 @@ singlePullButton.addEventListener("click", () => {
 multiPullButton.addEventListener("click", () => {
     const personnages = []; // Déclarez le tableau une seule fois
     for (let i = 0; i < 10; i++) {
-        const personnage = tirerPersonnage(pool);
+        const personnage = tirerPersonnage(character);
         personnages.push(personnage); // Ajoutez chaque personnage au tableau
         collection.push(personnage); // Ajoutez chaque personnage à la collection
     }
