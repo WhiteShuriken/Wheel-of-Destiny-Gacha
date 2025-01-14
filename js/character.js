@@ -1,6 +1,6 @@
 export const character = [
-    { id: 1, name: "Arnaud", rarity: "Légendaire", probability: 5 },
-    { id: 2, name: "Kemsey", rarity: "Épique", probability: 15 },
-    { id: 3, name: "Sabrina", rarity: "Rare", probability: 30 },
-    { id: 4, name: "Personnage Commun", rarity: "Commun", probability: 50 },
+    { id: 1, name: "Arnaud", rarity: "legend" },
+    { id: 2, name: "Kemsey", rarity: "epic" },
+    { id: 3, name: "Sabrina", rarity: "rare" },
+    { id: 4, name: "Nael", rarity: "common" },
 ];

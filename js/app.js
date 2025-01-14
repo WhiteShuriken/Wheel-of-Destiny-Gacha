@@ -1,6 +1,7 @@
 import { character } from './character.js';
 import { tirerPersonnage } from './gacha.js';
 import { afficherResultat } from './ui.js';
+import { rarity } from './rarity.js';
 
 const menus = {
     home: document.getElementById("home-menu"),
@@ -38,7 +39,9 @@ collectionButton.addEventListener("click", () => {
 singlePullButton.addEventListener("click", () => {
     const personnage = tirerPersonnage(character);
     collection.push(personnage); // Ajoute à la collection
-    afficherResultat(personnage, pullResultDiv);
+    console.log(personnage.rarity); // Vérification de la valeur de rarity
+    console.log(rarity); // Vérification de la valeur de rarity
+    afficherResultat(personnage, pullResultDiv, rarity); // Passer rarity ici
 });
 
 multiPullButton.addEventListener("click", () => {
@@ -48,7 +51,9 @@ multiPullButton.addEventListener("click", () => {
         personnages.push(personnage); // Ajoutez chaque personnage au tableau
         collection.push(personnage); // Ajoutez chaque personnage à la collection
     }
-    afficherResultat(personnages, pullResultDiv); // Passez le tableau de personnages à afficherResultat
+    console.log(personnages.map(p => p.rarity)); // Vérification des raretés des personnages
+    console.log(rarity); // Vérification de la valeur de rarity
+    afficherResultat(personnages, pullResultDiv, rarity); // Passer rarity ici
 });
 
 // Fonction pour afficher la collection
