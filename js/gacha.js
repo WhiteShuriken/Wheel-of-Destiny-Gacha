@@ -22,9 +22,10 @@ export function tirerPersonnage(character, rarity) {
         probability: rarityMap.get(char.rarity)
     }));
 
+    // Déterminer quel personnage est tiré en fonction des probabilités
     for (const personnage of weightedCharacters) {
         cumulative += personnage.probability;
         if (rand <= cumulative) return personnage;
     }
-    return null;
+    return null; // Retourne null si aucun personnage n'est tiré
 }

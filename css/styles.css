@@ -1,3 +1,4 @@
+/* Styles de base */
 body {
     font-family: Arial, sans-serif;
     text-align: center;
@@ -6,6 +7,7 @@ body {
     padding: 20px;
 }
 
+/* Conteneur du jeu */
 #game-container {
     padding: 20px;
     border-radius: 4px;
@@ -15,6 +17,7 @@ body {
     margin-bottom: 80px;
 }
 
+/* Styles des boutons */
 button {
     padding: 10px 20px;
     font-size: 16px;
@@ -28,14 +31,16 @@ button {
 }
 
 button img {
-    width : 24px;
+    width: 24px;
     height: 24px;
     margin-right: 8px;
 }
+
 button:hover {
-    background: #b641c5;
+    background: #b641c5; /* Couleur de fond au survol */
 }
 
+/* Pied de page */
 footer {
     position: fixed;
     bottom: 0;
@@ -65,7 +70,7 @@ footer button {
 }
 
 footer button:hover {
-    background-color: #f0f0f0;
+    background-color: #f0f0f0; /* Couleur de fond au survol du bouton de pied de page */
 }
 
 footer button img {
@@ -77,7 +82,13 @@ footer button img {
     margin-right: auto;
 }
 
+/* Résultat */
 #result {
     margin-top: 20px;
     font-size: 18px;
+}
+
+/* Nouvelles classes de fond de bouton */
+.active-button {
+    background: #5f1a68; /* Couleur d'exemple pour le bouton actif */
 }

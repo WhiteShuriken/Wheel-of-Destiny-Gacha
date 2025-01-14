@@ -24,6 +24,8 @@ let collection = []; // Stocke les personnages obtenus
 function showMenu(menuName) {
     Object.keys(menus).forEach(name => {
         menus[name].style.display = name === menuName ? "block" : "none";
+        const button = document.getElementById(`${name}-button`);
+        button.classList.toggle('active-button', name === menuName);
     });
 }
 
