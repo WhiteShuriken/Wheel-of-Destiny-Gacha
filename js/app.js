@@ -1,14 +1,17 @@
 import { character } from './data/character.js';
 import { rarity } from './data/rarity.js';
-import { tirerPersonnage } from './gacha.js';
-import { afficherResultat } from './ui.js';
+import { tirerPersonnage } from './function/gacha.js';
+import { afficherResultat } from './function/result.js';
+//import { currency } from './data/item.js';
 
 const menus = {
+    //shop: document.getElementById("shop-menu"),
     home: document.getElementById("home-menu"),
     pull: document.getElementById("pull-menu"),
     collection: document.getElementById("collection-menu"),
 };
 
+//const shopButton = document.getElementById("shop-button");
 const homeButton = document.getElementById("home-button");
 const pullButton = document.getElementById("pull-button");
 const collectionButton = document.getElementById("collection-button");
@@ -30,6 +33,7 @@ function showMenu(menuName) {
 }
 
 // Gestion des boutons de navigation
+//shopButton.addEventListener("click", () => showMenu("shop"));
 homeButton.addEventListener("click", () => showMenu("home"));
 pullButton.addEventListener("click", () => showMenu("pull"));
 collectionButton.addEventListener("click", () => {
