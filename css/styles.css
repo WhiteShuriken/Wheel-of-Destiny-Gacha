@@ -13,7 +13,7 @@ body {
     border-radius: 4px;
     box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
     display: inline-block;
-    width: 90%;
+    width: 80%;
     margin-bottom: 80px;
 }
 
@@ -38,6 +38,11 @@ button img {
 
 button:hover {
     background: #b641c5; /* Couleur de fond au survol */
+}
+
+/* Styles bouton du Menu Actif */
+.active-button {
+    background: #5f1a68; /* Couleur d'exemple pour le bouton actif */
 }
 
 /* Pied de page */
@@ -88,7 +93,34 @@ footer button img {
     font-size: 18px;
 }
 
-/* Nouvelles classes de fond de bouton */
-.active-button {
-    background: #5f1a68; /* Couleur d'exemple pour le bouton actif */
+/* Styles pour l'affichage des monnaies */
+#currency-display {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    align-items: center;
+    background-color: #76467c;
+    border-radius: 3px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    padding: 5px;
+    
+    
+}
+
+#currency-display div {
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+}
+
+#currency-display img {
+    width: 25px;
+    height: 25px;
+    margin-right: 5px;
+}
+
+#currency-display span {
+    font-size: 16px;
+    font-weight: bold;
 }
